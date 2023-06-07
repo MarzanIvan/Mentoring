@@ -4,17 +4,17 @@
 int main() {
     using namespace std;
     setlocale(0, "rus");
-    char string[] = "Hello 2023 year. ~3256¨¸123";
+    char string[] = "Hello 2023 year. ~3256Â¨Â¸123";
     int count = 0;
 
 
-    for (char* pstring = string; *(pstring++); ) {
+    for (char* pstring = string; *pstring; pstring++) {
         if (isdigit(*pstring) && (*pstring & 1) == 0) {
             count++;
         }
     }
 
-    cout << "Êîëè÷åñòâî ÷¸òíûõ ÷èñåë: " << count << endl;
+    cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã·Â¸Ã²Ã­Ã»Ãµ Ã·Ã¨Ã±Ã¥Ã«: " << count << endl;
 
     return 0;
 }
